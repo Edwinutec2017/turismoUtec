@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "855319976749",
+    "firebase_url": "https://turismo-3ab5b.firebaseio.com",
+    "project_id": "turismo-3ab5b",
+    "storage_bucket": "turismo-3ab5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855319976749:android:daf796fa1b0e4846",
+        "android_client_info": {
+          "package_name": "com.example.edwin.turismo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855319976749-btueierstnltt513pjtpehj79ebl6i5r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.turismo",
+            "certificate_hash": "d734c2c982efe4e54b4b2f8ebf10075ed5788925"
+          }
+        },
+        {
+          "client_id": "855319976749-alhvfqv0c4k35vmog5j8v1t1sm9dgbbu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7pvZui96yUpATBAcnJxIo4Nri_LiBH_I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855319976749-alhvfqv0c4k35vmog5j8v1t1sm9dgbbu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
