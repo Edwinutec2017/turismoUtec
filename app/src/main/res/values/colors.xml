@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#689f38</color>
+    <color name="colorPrimaryDark">#689f38</color>
     <color name="colorAccent">#1ae9c6</color>
-    <color name="colorFragmento">#689f38</color>
+    <color name="colorFragmento">#000000</color>
+    <color name="colorActivity">#689f38</color>
     <color name="editText">#303f9f</color>
     <color name="colorLetra">#ffffff</color>
-    <color name="btn">#060606</color>
+    <color name="colorFondoIco">#ffffff</color>
+    <color name="btn">#689f38</color>
 </resources>

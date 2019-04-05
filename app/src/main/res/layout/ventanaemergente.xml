@@ -26,6 +26,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/barraGuardar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        tools:visibility="gone" />
+
     <LinearLayout
         android:id="@+id/lyBntVnt"
         android:layout_width="match_parent"

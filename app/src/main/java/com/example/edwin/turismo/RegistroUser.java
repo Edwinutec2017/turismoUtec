@@ -1,5 +1,6 @@
 package com.example.edwin.turismo;
 
+import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,8 +22,11 @@ import com.google.firebase.auth.FirebaseUser;
 public class RegistroUser extends AppCompatActivity {
 private Button btnCancelarReg,btnRegistrarser,btnCanceVenta,btnConfirmar;
 private EditText editRegPass1,editRegPass2,editRegEmail;
+private ProgressBar progressBar;
+private ObjectAnimator ani;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    private int reps;
 private Dialog dgConfirmar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,22 +94,22 @@ if(editRegPass1.length()>=6){
         });
     }
     /*para crear un nuevo usuario*/
-    public void  crearUser(){
+    public int crearUser(){
+
         firebaseAuth.createUserWithEmailAndPassword(editRegEmail.getText().toString(), editRegPass1.getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplication(),"Usurario registrado",Toast.LENGTH_SHORT).show();
-                            dgConfirmar.dismiss();
-                            finish();
+                            /*insertado*/
+                       reps =1;
                         } else {
-                         Toast.makeText(getApplication(),"Email y password Ya estan Registrados",Toast.LENGTH_LONG).show();
-                         dgConfirmar.dismiss();
-
+                            /*no insertado*/
+                        reps = 0;
                         }
                     }
                 });
+      return  reps;
     }
     /*para mostrar ventana emergente*/
     public void ventanaEmergente(){
@@ -115,6 +120,12 @@ dgConfirmar.setContentView(R.layout.ventanaemergente);
 dgConfirmar.show();
 btnCanceVenta=dgConfirmar.findViewById(R.id.btnCancVent);
 btnConfirmar=dgConfirmar.findViewById(R.id.btnGuarVent);
+progressBar =dgConfirmar.findViewById(R.id.barraGuardar);
+progressBar.setVisibility(View.GONE);
+/*animacion de el progreso*/
+ani=ObjectAnimator.ofInt(progressBar,"progress",0,200);
+
+/*------*/
 /*cancelar el registro*/
 btnCanceVenta.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -126,7 +137,21 @@ btnCanceVenta.setOnClickListener(new View.OnClickListener() {
 btnConfirmar.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        crearUser();
+progressBar.setVisibility(View.VISIBLE);
+btnCanceVenta.setVisibility(View.INVISIBLE);
+btnConfirmar.setVisibility(View.INVISIBLE);
+if(crearUser()==1){
+    Toast.makeText(getApplication(),"Usuario Registrado con exito",Toast.LENGTH_SHORT).show();
+    dgConfirmar.dismiss();
+    finish();
+
+}else{
+    progressBar.setVisibility(View.GONE);
+    btnConfirmar.setVisibility(View.VISIBLE);
+  btnCanceVenta.setVisibility(View.VISIBLE);
+    Toast.makeText(getApplication(),"Email ya esta registrado",Toast.LENGTH_SHORT).show();
+}
+
     }
 });
     }
