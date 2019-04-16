@@ -16,9 +16,10 @@
     <string name="txtConfirmar">GUARDAR LOS DATOS</string>
     <string name="btnCancelarVent">Cancelar</string>
     <string name="title_activity_menu_principal">MenuPrincipal</string>
-
+<string name="imgmenu">menu principal</string>
+    <string name="titulopromo">Promocion Turistica de El Salvador</string>
+<string name="imopromo">Promocion imagen</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Salir</string>
 </resources>
