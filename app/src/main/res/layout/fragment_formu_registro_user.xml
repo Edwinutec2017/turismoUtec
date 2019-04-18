@@ -17,7 +17,7 @@
         android:layout_height="150dp"
         android:layout_margin="10dp"
         android:background="@drawable/img"
-        android:src="@drawable/icono" />
+        android:src="@drawable/banner" />
 
     <TextView
         android:id="@+id/txtReg"
