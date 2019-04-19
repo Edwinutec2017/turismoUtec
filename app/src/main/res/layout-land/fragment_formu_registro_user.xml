@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragRegUser"
@@ -15,7 +15,9 @@
         android:id="@+id/imgLogoReg"
         android:layout_width="100dp"
         android:layout_height="70dp"
-        android:layout_margin="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:background="@drawable/img"
         android:src="@drawable/banner" />
 
@@ -23,107 +25,101 @@
         android:id="@+id/txtReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/imgLogoReg"
+        android:layout_centerHorizontal="true"
         android:text="@string/registroUser"
         android:textAllCaps="true"
         android:textColor="@color/colorLetra"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <LinearLayout
-        android:id="@+id/fragRegemail"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/editEmailReg"
+        android:layout_marginStart="143dp"
+        android:layout_weight="1"
+        android:background="@drawable/icodis"
+        android:contentDescription="@string/User"
+        android:src="@drawable/correo" />
 
-        <ImageView
-            android:id="@+id/imgEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/icodis"
-            android:contentDescription="@string/User"
-            android:src="@drawable/correo" />
-
-        <EditText
-            android:id="@+id/editEmailReg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/edit"
-            android:ems="10"
-            android:hint="@string/User"
-            android:inputType="textEmailAddress"
-            android:padding="5dp"
-            android:textColor="@color/colorLetra"
-            android:textColorHint="@color/btn" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/fargRegPass1"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editEmailReg"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtReg"
+        android:layout_marginTop="116dp"
+        android:layout_weight="1"
+        android:background="@drawable/edit"
+        android:ems="10"
+        android:hint="@string/User"
+        android:inputType="textEmailAddress"
+        android:padding="5dp"
+        android:textColor="@color/colorLetra"
+        android:textColorHint="@color/btn" />
 
-        <ImageView
-            android:id="@+id/imgPass1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/icodis"
-            android:contentDescription="@string/Password"
-            android:src="@drawable/contrasena" />
-
-        <EditText
-            android:id="@+id/editPassReg1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/edit"
-            android:ems="10"
-            android:hint="@string/Password"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            android:textColorHint="@color/btn" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/fragrefPass2"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imgPass1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
+        android:layout_alignStart="@+id/imgEmail"
+        android:layout_alignTop="@+id/editPassReg1"
+        android:layout_weight="1"
+        android:background="@drawable/icodis"
+        android:contentDescription="@string/Password"
+        android:src="@drawable/contrasena" />
 
-        <ImageView
-            android:id="@+id/imgPass2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/icodis"
-            android:contentDescription="@string/Password"
-            android:src="@drawable/contrasena" />
+    <EditText
+        android:id="@+id/editPassReg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtReg"
+        android:layout_marginBottom="117dp"
+        android:layout_weight="1"
+        android:background="@drawable/edit"
+        android:ems="10"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textColorHint="@color/btn" />
 
-        <EditText
-            android:id="@+id/editPassReg2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/edit"
-            android:ems="10"
-            android:hint="@string/repita"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            android:textColorHint="@color/btn" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgPass2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imgEmail"
+        android:layout_marginBottom="80dp"
+        android:layout_weight="1"
+        android:background="@drawable/icodis"
+        android:contentDescription="@string/Password"
+        android:src="@drawable/contrasena" />
+
+    <EditText
+        android:id="@+id/editPassReg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtReg"
+        android:layout_alignTop="@+id/imgPass2"
+        android:layout_weight="1"
+        android:background="@drawable/edit"
+        android:ems="10"
+        android:hint="@string/repita"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textColorHint="@color/btn" />
 
     <LinearLayout
         android:id="@+id/fragRegbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
         android:orientation="horizontal">
 
         <Button
@@ -145,4 +141,4 @@
             android:text="@string/regUserBtn"
             android:textColor="@color/colorLetra" />
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
