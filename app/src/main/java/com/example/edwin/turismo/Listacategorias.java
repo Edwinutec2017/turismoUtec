@@ -46,7 +46,8 @@ public class Listacategorias extends AppCompatActivity implements Response.Liste
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listacategorias);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        
+        /*para cambiarle el titulo a la barra */
+this.setTitle(R.string.regresar);
 /*para aser las peticiones*/
 rq= Volley.newRequestQueue(getApplicationContext());
 /*para seleccionar la categoria*/

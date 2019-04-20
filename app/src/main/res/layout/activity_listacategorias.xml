@@ -10,4 +10,10 @@
     android:orientation="vertical"
     tools:context="com.example.edwin.turismo.Listacategorias">
 
+    <fragment
+        android:id="@+id/fragLista"
+        android:name="com.example.edwin.turismo.ListaFragmen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp" />
 </LinearLayout>
