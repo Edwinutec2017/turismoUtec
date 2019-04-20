@@ -19,7 +19,7 @@
         android:layout_marginLeft="10dp"
         android:background="@drawable/img"
         android:contentDescription="@string/logo"
-        android:src="@drawable/icono" />
+        android:src="@drawable/banner" />
 
     <TextView
         android:id="@+id/txtInicio"

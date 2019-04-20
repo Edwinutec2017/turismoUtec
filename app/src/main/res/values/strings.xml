@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Turismo</string>
+    <string name="app_name">Regresar</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="User">Correo Electronico.</string>
     <string name="Password">Password.</string>
@@ -15,11 +15,15 @@
     <string name="btnConfirmarVent">Confirmar</string>
     <string name="txtConfirmar">GUARDAR LOS DATOS</string>
     <string name="btnCancelarVent">Cancelar</string>
-    <string name="title_activity_menu_principal">MenuPrincipal</string>
-<string name="imgmenu">menu principal</string>
+    <string name="title_activity_menu_principal">Menu Principal</string>
+    <string name="imgmenu">menu principal</string>
     <string name="titulopromo">Promocion Turistica de El Salvador</string>
-<string name="imopromo">Promocion imagen</string>
+    <string name="imopromo">Promocion imagen</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Salir</string>
+    <string name="menumsg">BIENVENIDO</string>
+    <string name="menumsgcon">PROMOCION TURISTA DE EL SALVADOR</string>
+    <string name="correoturismo">turismosv@gmail.com</string>
+    <string name="tituliList">LISTA PROMOCIONES</string>
 </resources>
