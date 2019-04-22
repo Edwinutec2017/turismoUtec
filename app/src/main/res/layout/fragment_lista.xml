@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyLista"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragdesng"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    tools:context="com.example.edwin.turismo.ListaFragmen">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/txtTituliList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tituliList"
+        android:textColor="@color/colorLetra"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/listPromo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/listdisng" />
+</LinearLayout>
