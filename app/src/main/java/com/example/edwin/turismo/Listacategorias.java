@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -39,8 +40,9 @@ public class Listacategorias extends AppCompatActivity implements Response.Liste
     private List<String> nombre_comercio = new ArrayList<String>();
     private List<String> coordenadas=new ArrayList<String>();
     private String mensaje = "";
-
-
+private int catSeleccionado=0;
+private String nameCateg=null;
+private ListView lista;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +50,39 @@ public class Listacategorias extends AppCompatActivity implements Response.Liste
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         /*para cambiarle el titulo a la barra */
 this.setTitle(R.string.regresar);
+Bundle bundle=getIntent().getExtras();
+lista=findViewById(R.id.listPromo);
+/*para las categorias seleccionadas */
+switch (bundle.getString("accion")){
+    case "1":
+        nameCateg="Volcanes";
+        catSeleccionado=1;
+        break;
+    case "2":
+        nameCateg="Playas";
+        catSeleccionado=2;
+        break;
+    case "3":
+        nameCateg="Pueblos coloniales";
+        catSeleccionado=3;
+        break;
+    case "4":
+        nameCateg="Restaurantes";
+        catSeleccionado=4;
+        break;
+    case "5":
+        nameCateg="Hoteles";
+        catSeleccionado=5;
+        break;
+    case "6":
+        nameCateg="Recreacion";
+        catSeleccionado=6;
+        break;
+}
 /*para aser las peticiones*/
 rq= Volley.newRequestQueue(getApplicationContext());
 /*para seleccionar la categoria*/
-selectCategoria(1);
+selectCategoria(catSeleccionado);
     }
 
 
@@ -73,6 +104,8 @@ selectCategoria(1);
         JSONArray jsonArray = response.optJSONArray("datos");
         JSONObject jsonObject = null;
         Toast.makeText(getApplicationContext(),"cantidad "+jsonArray.length(),Toast.LENGTH_LONG).show();
+
+
        try {
             for (int i = 0; i < jsonArray.length(); i++) {
                 jsonObject = jsonArray.getJSONObject(i);
@@ -96,6 +129,7 @@ selectCategoria(1);
                 coordenadas.add(jsonObject.optString("coordenadas"));
 
             }
+llenadoLista();
            Toast.makeText(getApplicationContext(),"data "+ id_cate.get(0),Toast.LENGTH_LONG).show();
         } catch (JSONException e) {
             e.printStackTrace();
@@ -143,5 +177,11 @@ selectCategoria(1);
 
         }
 
+    }
+
+    /*metodo para llenar la lista */
+    public void llenadoLista(){
+        AdaptadorCategorias adaptadorCategorias=new AdaptadorCategorias(this,titulo,imagen);
+        lista.setAdapter(adaptadorCategorias);
     }
 }
