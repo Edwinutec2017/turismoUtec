@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -83,6 +85,12 @@ switch (bundle.getString("accion")){
 rq= Volley.newRequestQueue(getApplicationContext());
 /*para seleccionar la categoria*/
 selectCategoria(catSeleccionado);
+lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Toast.makeText(getApplicationContext(),"selecciono promocion "+titulo.get(i),Toast.LENGTH_SHORT).show();
+    }
+});
     }
 
 
@@ -130,7 +138,7 @@ selectCategoria(catSeleccionado);
 
             }
 llenadoLista();
-           Toast.makeText(getApplicationContext(),"data "+ id_cate.get(0),Toast.LENGTH_LONG).show();
+
         } catch (JSONException e) {
             e.printStackTrace();
 
