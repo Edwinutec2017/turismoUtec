@@ -42,6 +42,7 @@ public class MenuPrincipal extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
     }
 
     @Override
@@ -83,19 +84,32 @@ public class MenuPrincipal extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_volcanes) {
+
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
+            intent.putExtra("accion","1");
             startActivity(intent);
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        }  else if (id == R.id.nav_playa) {
+            Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
+            intent.putExtra("accion","2");
+            startActivity(intent);
+        } else if (id == R.id.nav_hotel) {
+            Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
+            intent.putExtra("accion","5");
+            startActivity(intent);
+        } else if (id == R.id.nav_colonial) {
+            Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
+            intent.putExtra("accion","3");
+            startActivity(intent);
+        } else if (id == R.id.nav_restaurante) {
+            Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
+            intent.putExtra("accion","4");
+            startActivity(intent);
+        }else if (id == R.id.nav_diversion) {
+            Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
+            intent.putExtra("accion","6");
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
