@@ -27,5 +27,10 @@
     <string name="menumsgcon">PROMOCION TURISTA DE EL SALVADOR</string>
     <string name="correoturismo">turismosv@gmail.com</string>
     <string name="tituliList">LISTA PROMOCIONES</string>
- <string name="regresar">Regresar</string>
+    <string name="regresar">Regresar</string>
+    <string name="descripcionpromo">DESCRIPCION DE PROMOCION</string>
+    <string name="cotizacion">Digite su consulta de cotizacion</string>
+    <string name="enviar">Enviar</string>
+    <string name="cotizacionT">Cotizacion</string>
+
 </resources>
