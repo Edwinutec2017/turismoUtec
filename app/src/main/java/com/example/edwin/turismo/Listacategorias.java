@@ -1,5 +1,6 @@
 package com.example.edwin.turismo;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -49,6 +50,7 @@ private ListView lista;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listacategorias);
+        /*para aser la fecha a atras */
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         /*para cambiarle el titulo a la barra */
 this.setTitle(R.string.regresar);
@@ -88,15 +90,33 @@ selectCategoria(catSeleccionado);
 lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(getApplicationContext(),"selecciono promocion "+titulo.get(i),Toast.LENGTH_SHORT).show();
+
+        Intent detalle=new Intent(getApplicationContext(),DetalleCateg.class);
+        detalle.putExtra("id",id_cate.get(i));
+        detalle.putExtra("titulo",titulo.get(i));
+        detalle.putExtra("fecha",fecha_promo.get(i));
+        detalle.putExtra("descuento",decuento_promo.get(i));
+        detalle.putExtra("descripcion",descripcion.get(i));
+detalle.putExtra("contacto",nombre_contacto.get(i));
+detalle.putExtra("telefono",telefono.get(i));
+detalle.putExtra("comercio",nombre_comercio.get(i));
+detalle.putExtra("email",email.get(i));
+detalle.putExtra("ubicacion",coordenadas.get(i));
+detalle.putExtra("img",imagen.get(i));
+        startActivity(detalle);
+        finish();
+
+      //  Toast.makeText(getApplicationContext(),"telefono "+imagen.get(i),Toast.LENGTH_SHORT).show();
     }
 });
     }
 
-
+/*metodo para aser salir la aplicacion */
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
+        Intent pp=new Intent(getApplicationContext(),MenuPrincipal.class);
+        startActivity(pp);
         finish();
         return false;
     }
@@ -111,7 +131,7 @@ lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
         JSONArray jsonArray = response.optJSONArray("datos");
         JSONObject jsonObject = null;
-        Toast.makeText(getApplicationContext(),"cantidad "+jsonArray.length(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),"cantidad "+jsonArray.length(),Toast.LENGTH_LONG).show();
 
 
        try {
@@ -123,17 +143,18 @@ lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 fecha_promo.add(jsonObject.optString("fecha_promocion"));
                 decuento_promo.add(jsonObject.optDouble("descuento"));
                 titulo.add(jsonObject.optString("titulo_img"));
-                descripcion.add(jsonObject.optString("descripcio_img"));
+                descripcion.add(jsonObject.optString("descripcion_img"));
 /*para convertir la img a bitmap*/
-                String img = jsonObject.optString("img");
+                String img = jsonObject.optString("imagen");
                 byte[] bytedate = android.util.Base64.decode(img, android.util.Base64.DEFAULT);
                 Bitmap bitmapimg = BitmapFactory.decodeByteArray(bytedate, 0, bytedate.length);
 /*-----------------------------------------------------------------*/
                 imagen.add(bitmapimg);
-                nombre_contacto.add(jsonObject.optString("nombre_contacto"));
-                nombre_comercio.add(jsonObject.optString("email_contacto"));
-                telefono.add(jsonObject.optString("telefono_numbers"));
+                nombre_contacto.add(jsonObject.optString("nombre_Contacto"));
+                nombre_comercio.add(jsonObject.optString("nombre_Comercio"));
+                telefono.add(jsonObject.optString("telefono_Contacto"));
                 nombre_comercio.add(jsonObject.optString("nombre_comercio"));
+                email.add(jsonObject.optString("email_Contacto"));
                 coordenadas.add(jsonObject.optString("coordenadas"));
 
             }

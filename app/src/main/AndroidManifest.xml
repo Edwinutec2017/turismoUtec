@@ -23,7 +23,11 @@
             android:name=".MenuPrincipal"
             android:label="@string/title_activity_menu_principal"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Listacategorias"></activity>
+        <activity android:name=".Listacategorias" />
+        <activity
+            android:name=".DetalleCateg"
+            android:label="@string/title_activity_detalle_categ"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -89,15 +89,18 @@ public class MenuPrincipal extends AppCompatActivity
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","1");
             startActivity(intent);
+            finish();
 
         }  else if (id == R.id.nav_playa) {
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","2");
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_hotel) {
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","5");
             startActivity(intent);
+            finish();
         } else if (id == R.id.nav_colonial) {
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","3");
@@ -106,10 +109,12 @@ public class MenuPrincipal extends AppCompatActivity
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","4");
             startActivity(intent);
+            finish();
         }else if (id == R.id.nav_diversion) {
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","6");
             startActivity(intent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

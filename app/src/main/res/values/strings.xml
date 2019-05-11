@@ -32,5 +32,17 @@
     <string name="cotizacion">Digite su consulta de cotizacion</string>
     <string name="enviar">Enviar</string>
     <string name="cotizacionT">Cotizacion</string>
+    <string name="principal">Menu Principal</string>
+    <string name="title_activity_detalle_categ">DetalleCateg</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 
+    <string name="tab_text_1">Detalle</string>
+    <string name="tab_text_2">Ubicacion</string>
+    <string name="tab_text_3">Cotizacion</string>
+    <string name="fecha">Fecha:</string>
+    <string name="descuento">Descuento:</string>
+    <string name="contacto">Contacto:</string>
+    <string name="tele">Telefono:</string>
+    <string name="comercio">Comercio:</string>
+    <string name="email">Email:</string>
 </resources>
