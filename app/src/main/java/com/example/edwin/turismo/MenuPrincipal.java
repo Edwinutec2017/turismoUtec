@@ -73,6 +73,7 @@ public class MenuPrincipal extends AppCompatActivity
         if (id == R.id.action_settings) {
 
             startActivity(new Intent(getApplicationContext(),Login.class));
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
