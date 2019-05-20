@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -29,7 +30,7 @@ public class Listacategorias extends AppCompatActivity implements Response.Liste
     private String url = "";
     private RequestQueue rq;
     private JsonRequest jrq;
-
+private TextView titulopp;
     /*array para traer los datos*/
     private List<Integer> id_cate = new ArrayList<Integer>();
     private List<String> fecha_promo = new ArrayList<String>();
@@ -55,30 +56,37 @@ private ListView lista;
         /*para cambiarle el titulo a la barra */
 this.setTitle(R.string.regresar);
 Bundle bundle=getIntent().getExtras();
+titulopp=findViewById(R.id.txtTituliList);
 lista=findViewById(R.id.listPromo);
 /*para las categorias seleccionadas */
 switch (bundle.getString("accion")){
     case "1":
+        titulopp.setText("Promociones de Volcanes");
         nameCateg="Volcanes";
         catSeleccionado=1;
         break;
     case "2":
+        titulopp.setText("Promociones de Playas");
         nameCateg="Playas";
         catSeleccionado=2;
         break;
     case "3":
+        titulopp.setText("Promociones de Colonial");
         nameCateg="Pueblos coloniales";
         catSeleccionado=3;
         break;
     case "4":
+        titulopp.setText("Promociones de Restaurante");
         nameCateg="Restaurantes";
         catSeleccionado=4;
         break;
     case "5":
+        titulopp.setText("Promociones de Hoteles");
         nameCateg="Hoteles";
         catSeleccionado=5;
         break;
     case "6":
+        titulopp.setText("Promociones de Recreacion");
         nameCateg="Recreacion";
         catSeleccionado=6;
         break;

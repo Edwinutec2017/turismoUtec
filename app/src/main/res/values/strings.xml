@@ -26,7 +26,7 @@
     <string name="menumsg">BIENVENIDO</string>
     <string name="menumsgcon">PROMOCION TURISTA DE EL SALVADOR</string>
     <string name="correoturismo">turismosv@gmail.com</string>
-    <string name="tituliList">LISTA PROMOCIONES</string>
+    <string name="tituliList">PROMOCIONES</string>
     <string name="regresar">Regresar</string>
     <string name="descripcionpromo">DESCRIPCION DE PROMOCION</string>
     <string name="cotizacion">Digite su consulta de cotizacion</string>
@@ -47,11 +47,16 @@
     <string name="email">Email:</string>
     <string name="title_activity_map">Map</string>
     <string name="guardarDatos">Preference category</string>
-    <string name="TitleCheckLogin">Gurdar Uusuario y Contraseña</string>
+    <string name="TitleCheckLogin">Gurdar Usuario y Contraseña</string>
     <string name="keyChechLogin">loginData</string>
-    <string name="DijiteUser">Dijite El Usuario</string>
+    <string name="DijiteUser">Correo De Login</string>
     <string name="descUser">Se guardar el usuario con que inicio la aplicacion</string>
     <string name="editUserPreferencia">UserPreference</string>
-    <string name="ediPassPreference">edit_text_preference_1</string>
+    <string name="ediPassPreference">PassPreference</string>
     <string name="passPrefence">Guardar la Contraseña</string>
+    <string name="preferentitle">Guardar Datos de Login</string>
+    <string name="titleeduserpref">Usuario (correo)</string>
+    <string name="titlePassPreference">Password</string>
+    <string name="edistPaa">Password</string>
+    <string name="sumaChe">Guarda las Credenceiales de El login</string>
 </resources>

@@ -119,6 +119,27 @@
             android:background="@drawable/btn"
             android:text="@string/Login"
             android:textColor="@color/colorLetra" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/ProgresBarLogin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/ImgBtnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fragdesng"
+            android:src="@drawable/apagar" />
     </LinearLayout>
 </LinearLayout>
 

@@ -74,7 +74,7 @@ lg=Double.parseDouble(log);
         LatLng sydney = new LatLng(lo,lg);
         mgoogleMap.addMarker(new MarkerOptions().position(sydney).title(Titulo));
         mgoogleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        CameraUpdate ZoomCam = CameraUpdateFactory.zoomTo(10);
+        CameraUpdate ZoomCam = CameraUpdateFactory.zoomTo(15);
         mgoogleMap.animateCamera(ZoomCam);
     }
 }

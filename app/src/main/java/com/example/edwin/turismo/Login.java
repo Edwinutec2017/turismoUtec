@@ -1,12 +1,17 @@
 package com.example.edwin.turismo;
 //holahola
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,9 +24,11 @@ import com.google.firebase.auth.FirebaseUser;
 public class Login extends AppCompatActivity {
 private Button btnRegistrarse,btnLogin;
 private EditText editLoginEmail,editLoginPass;
+private ProgressBar progressBar;
 private FirebaseAuth firebaseAuth;
 private FirebaseAuth.AuthStateListener authStateListener;
 private FirebaseUser user;
+private ImageButton salir;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +41,17 @@ private FirebaseUser user;
         btnLogin=findViewById(R.id.btnLoguin);
         editLoginEmail=findViewById(R.id.edituser);
         editLoginPass=findViewById(R.id.editPassword);
+        progressBar=findViewById(R.id.ProgresBarLogin);
+        progressBar.setVisibility(View.INVISIBLE);
+        salir=findViewById(R.id.ImgBtnSalir);
         /**/
         /*FIREBASE*/
         FirebaseApp.initializeApp(this);
         firebaseAuth=FirebaseAuth.getInstance();
         user=FirebaseAuth.getInstance().getCurrentUser();
+
+
+
 authStateListener= new FirebaseAuth.AuthStateListener() {
     @Override
     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -55,7 +68,13 @@ authStateListener= new FirebaseAuth.AuthStateListener() {
                 startActivity(registrar);
             }
         });
-
+salir.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(getApplicationContext(),"Regrese Pronto....",Toast.LENGTH_SHORT).show();
+        finish();
+    }
+});
         /*inisio de sesion*/
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +87,9 @@ authStateListener= new FirebaseAuth.AuthStateListener() {
                     editLoginEmail.setError("Email requerido");
 
                 }else if(validarCampos.validarCorreo(editLoginEmail)){
+                    btnRegistrarse.setVisibility(View.INVISIBLE);
+                    btnLogin.setVisibility(View.INVISIBLE);
+                    progressBar.setVisibility(View.VISIBLE);
                    inicioLogin();
                 }else {
                     editLoginEmail.requestFocus();
@@ -90,9 +112,14 @@ finish();
                     } else {
    /*autenticacion fallida*/
 if(user.getEmail().equals(editLoginEmail.getText().toString())){
+    btnLogin.setVisibility(View.VISIBLE);
+    btnRegistrarse.setVisibility(View.VISIBLE);
+    progressBar.setVisibility(View.INVISIBLE);
     Toast.makeText(getApplicationContext(),"Password  Incorrecto",Toast.LENGTH_LONG).show();
 editLoginPass.setText("");
 }else{
+    progressBar.setVisibility(View.INVISIBLE);
+    btnRegistrarse.setVisibility(View.VISIBLE);
     Toast.makeText(getApplicationContext(),"No esta registrado",Toast.LENGTH_LONG).show();
     limpiarCampos();
 }
@@ -109,5 +136,15 @@ firebaseAuth.addAuthStateListener(authStateListener);
     editLoginEmail.setText("");
     editLoginPass.setText("");
 
+    }
+
+    @Override
+    protected void onResume() {
+        SharedPreferences obj= PreferenceManager.getDefaultSharedPreferences(this);
+        if(obj.getBoolean("loginData",true)){
+editLoginEmail.setText(obj.getString("UserPreference","User"));
+editLoginPass.setText(obj.getString("PassPreference","Pass"));
+        }
+        super.onResume();
     }
 }

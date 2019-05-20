@@ -71,7 +71,7 @@ private int id;
 
 Bundle recibir =getIntent().getExtras();
 id=recibir.getInt("id");
-titulo="Titulo :"+recibir.getString("titulo");
+titulo=recibir.getString("titulo");
 fecha=recibir.getString("fecha");
 descuento=String.valueOf(recibir.getDouble("descuento"))+"%";
 descripcion=recibir.getString("descripcion");

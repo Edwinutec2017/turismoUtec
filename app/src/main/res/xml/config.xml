@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="@string/guardarDatos">
+    <PreferenceCategory android:title="@string/preferentitle">
 
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="@string/keyChechLogin"
             android:title="@string/TitleCheckLogin"
-            android:summary="Guardar Usuario Y contraseña"/>
+           android:summary="@string/sumaChe" />
         <EditTextPreference
-            android:dependency="@string/TitleCheckLogin"
-            android:defaultValue="Correo Electronico"
+            android:dependency="@string/keyChechLogin"
+            android:defaultValue="@string/DijiteUser"
             android:key="@string/editUserPreferencia"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="@string/DijiteUser"
-            android:summary="@string/descUser"/>
+            android:title="@string/titleeduserpref" />
         <EditTextPreference
-            android:defaultValue="false"
+            android:defaultValue="@string/edistPaa"
+            android:dependency="@string/keyChechLogin"
             android:key="@string/ediPassPreference"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:title="@string/passPrefence" />
-
+            android:title="@string/titlePassPreference" />
     </PreferenceCategory>
 </PreferenceScreen>

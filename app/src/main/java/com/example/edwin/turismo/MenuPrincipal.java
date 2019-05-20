@@ -72,7 +72,7 @@ public class MenuPrincipal extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-     finish();
+            startActivity(new Intent(getApplicationContext(),Login.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -114,6 +114,12 @@ public class MenuPrincipal extends AppCompatActivity
             Intent intent=new Intent(getApplicationContext(),Listacategorias.class);
             intent.putExtra("accion","6");
             startActivity(intent);
+            finish();
+        }else if(id == R.id.nav_config){
+            startActivity(new Intent(getApplicationContext(),PrincipalPreferencia.class));
+            finish();
+        }else if (id == R.id.nav_apagar){
+           startActivity(new Intent(getApplicationContext(),Login.class));
             finish();
         }
 
