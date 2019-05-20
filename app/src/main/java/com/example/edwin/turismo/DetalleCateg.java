@@ -81,7 +81,7 @@ comercio=recibir.getString("comercio");
 email=recibir.getString("email");
 coordenadas=recibir.getString("ubicacion");
 img= (Bitmap) recibir.get("img");
-//Toast.makeText(getApplicationContext(),"img"+img,Toast.LENGTH_LONG).show();
+
 
     }
 
@@ -117,8 +117,8 @@ public void retornar(){
      switch (position){
          case 0:
              return new Detalle(titulo,fecha,descuento,descripcion,contacto,telefono,comercio,email,img);
-         case 1:return new Ubicacion();
-         case 2: return new Cotizacion();
+         case 1:return new Ubicacion(comercio,coordenadas);
+
 
 
      }
@@ -128,7 +128,7 @@ public void retornar(){
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 2;
         }
 
         @Override
@@ -136,7 +136,7 @@ public void retornar(){
             switch (position){
                 case 0:return "Detalle";
                 case 1: return "Ubicacion";
-                case 2: return "Cotizacion";
+
 
             }
             return null;

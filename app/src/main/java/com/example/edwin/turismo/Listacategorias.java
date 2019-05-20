@@ -102,6 +102,7 @@ detalle.putExtra("telefono",telefono.get(i));
 detalle.putExtra("comercio",nombre_comercio.get(i));
 detalle.putExtra("email",email.get(i));
 detalle.putExtra("ubicacion",coordenadas.get(i));
+
 detalle.putExtra("img",imagen.get(i));
         startActivity(detalle);
         finish();
@@ -123,7 +124,7 @@ detalle.putExtra("img",imagen.get(i));
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        Toast.makeText(getApplicationContext(),"error de conexion a la ws",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Conexion demasiada lenta ",Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -153,7 +154,7 @@ detalle.putExtra("img",imagen.get(i));
                 nombre_contacto.add(jsonObject.optString("nombre_Contacto"));
                 nombre_comercio.add(jsonObject.optString("nombre_Comercio"));
                 telefono.add(jsonObject.optString("telefono_Contacto"));
-                nombre_comercio.add(jsonObject.optString("nombre_comercio"));
+
                 email.add(jsonObject.optString("email_Contacto"));
                 coordenadas.add(jsonObject.optString("coordenadas"));
 

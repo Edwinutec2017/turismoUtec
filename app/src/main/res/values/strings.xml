@@ -45,4 +45,13 @@
     <string name="tele">Telefono:</string>
     <string name="comercio">Comercio:</string>
     <string name="email">Email:</string>
+    <string name="title_activity_map">Map</string>
+    <string name="guardarDatos">Preference category</string>
+    <string name="TitleCheckLogin">Gurdar Uusuario y Contraseña</string>
+    <string name="keyChechLogin">loginData</string>
+    <string name="DijiteUser">Dijite El Usuario</string>
+    <string name="descUser">Se guardar el usuario con que inicio la aplicacion</string>
+    <string name="editUserPreferencia">UserPreference</string>
+    <string name="ediPassPreference">edit_text_preference_1</string>
+    <string name="passPrefence">Guardar la Contraseña</string>
 </resources>
