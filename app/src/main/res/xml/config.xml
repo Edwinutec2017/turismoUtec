@@ -23,4 +23,13 @@
             android:singleLine="true"
             android:title="@string/titlePassPreference" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Ocultar Informacion">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/ocultar"
+            android:title="Ocultar Boton Flotante"
+            android:summary="@string/titleocultar"
+            />
+    </PreferenceCategory>
 </PreferenceScreen>

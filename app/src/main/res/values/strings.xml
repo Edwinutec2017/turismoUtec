@@ -59,4 +59,7 @@
     <string name="titlePassPreference">Password</string>
     <string name="edistPaa">Password</string>
     <string name="sumaChe">Guarda las Credenceiales de El login</string>
+    <string name="ocultar">ocultarflotante</string>
+    <string name="titleocultar">Oculta el boton Flotante que aparece en el menu principal</string>
+    <string name="confi">Configuraciones</string>
 </resources>

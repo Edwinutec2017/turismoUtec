@@ -1,7 +1,9 @@
 package com.example.edwin.turismo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -17,7 +19,7 @@ import android.widget.Toast;
 
 public class MenuPrincipal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,7 @@ public class MenuPrincipal extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+      fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +76,10 @@ public class MenuPrincipal extends AppCompatActivity
 
             startActivity(new Intent(getApplicationContext(),Login.class));
             finish();
+        }else if(id == R.id.action_confi){
+            startActivity(new Intent(getApplicationContext(),PrincipalPreferencia.class));
+            finish();
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -127,5 +133,14 @@ public class MenuPrincipal extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        SharedPreferences obj= PreferenceManager.getDefaultSharedPreferences(this);
+        if(obj.getBoolean("ocultarflotante",true)){
+fab.setVisibility(View.INVISIBLE);
+        }
+        super.onResume();
     }
 }
