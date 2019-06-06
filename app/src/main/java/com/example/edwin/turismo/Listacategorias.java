@@ -132,7 +132,7 @@ detalle.putExtra("img",imagen.get(i));
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        Toast.makeText(getApplicationContext(),"Conexion demasiada lenta ",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Conexion demasiado lenta ",Toast.LENGTH_SHORT).show();
     }
 
     @Override

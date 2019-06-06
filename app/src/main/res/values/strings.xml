@@ -36,9 +36,9 @@
     <string name="title_activity_detalle_categ">DetalleCateg</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
-    <string name="tab_text_1">Detalle</string>
-    <string name="tab_text_2">Ubicacion</string>
-    <string name="tab_text_3">Cotizacion</string>
+    <string name="tab_detalle">Detalle</string>
+    <string name="tab_ubicacion">Ubicacion</string>
+    <string name="tab_cotizacion">Cotizacion</string>
     <string name="fecha">Fecha:</string>
     <string name="descuento">Descuento:</string>
     <string name="contacto">Contacto:</string>
@@ -62,4 +62,18 @@
     <string name="ocultar">ocultarflotante</string>
     <string name="titleocultar">Oculta el boton Flotante que aparece en el menu principal</string>
     <string name="confi">Configuraciones</string>
+    <string name="title_activity_informacion">informacion</string>
+    <string name="tab_informacion">Acerca de</string>
+    <string name="tab_cambios">Change Log</string>
+    <string name="utec">Desarollado por estudiantes de Universidad Tecnologica de El Salvador,Copyright 2019</string>
+    <string name="integrantes">Integrantes:</string>
+    <string name="edwin">Edwin Alexander Nolasco González.</string>
+    <string name="juan">Juan Francisco Abrego Mendoza.</string>
+    <string name="henry">Henry Isaías Quevedo Cisneros.</string>
+    <string name="jose">José Armando Villavicencio Guevara.</string>
+    <string name="pedro">Pedro Fabrizio Alas Chávez.</string>
+    <string name="dev3">Desarrollado para la materia de:</string>
+    <string name="materia">Técnicas de calidad de software.</string>
+    <string name="impartida">Impartida por:</string>
+    <string name="catedratico">Ingeniero José Oswaldo Barrera.</string>
 </resources>

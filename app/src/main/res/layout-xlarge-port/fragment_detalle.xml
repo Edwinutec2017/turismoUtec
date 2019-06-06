@@ -21,9 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="35dp"
         android:textColor="@android:color/background_light"
-        android:textSize="25sp" />
+        android:textSize="45sp" />
 
     <LinearLayout
         android:id="@+id/lydet2"
@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="125dp"
         android:orientation="horizontal">
 
         <TextView
@@ -42,7 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/fecha"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txtFecha"
@@ -50,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@android:color/background_light"
-            android:textSize="14sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -58,7 +59,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/descuento"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/txtDescuento"
@@ -66,69 +68,39 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@android:color/background_light"
-            android:textSize="14sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imgDetalle"
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="200dp"
         android:contentDescription="@string/descuento"
         android:src="@drawable/bannerprincipal" />
 
     <TextView
         android:id="@+id/txtDescripDetalle"
         android:layout_width="match_parent"
-        android:layout_height="115dp"
+        android:layout_height="104dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="190dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginBottom="500dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:textColor="@color/colorFondoIco"
-        android:textSize="15sp" />
-
-    <LinearLayout
-        android:id="@+id/lycomercio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="165dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/comercio"
-            android:textColor="@android:color/background_light" />
-
-        <TextView
-            android:id="@+id/txtComercio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@android:color/background_light" />
-
-    </LinearLayout>
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="140dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginBottom="450dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:orientation="horizontal">
 
         <TextView
@@ -137,14 +109,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/contacto"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtContacto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -153,9 +127,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="110dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginBottom="375dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:orientation="horizontal">
 
         <TextView
@@ -164,14 +138,46 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/tele"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtTelefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lycomercio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/comercio"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtComercio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -179,9 +185,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="80dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginBottom="225dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:orientation="horizontal">
 
         <TextView
@@ -190,14 +196,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/email"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

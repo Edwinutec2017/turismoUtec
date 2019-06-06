@@ -30,9 +30,9 @@
             android:name=".MenuPrincipal"
             android:label="@string/title_activity_menu_principal"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Listacategorias"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            />
+        <activity
+            android:name=".Listacategorias"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
             android:name=".DetalleCateg"
             android:label="@string/title_activity_detalle_categ"
@@ -43,11 +43,15 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
+        <!--
+            <activity
             android:name=".Map"
             android:label="@string/title_activity_map" />
-        <activity android:name=".PrincipalPreferencia"
-            android:screenOrientation="portrait"/>
+        -->
+        <activity
+            android:name=".PrincipalPreferencia"
+            android:screenOrientation="portrait" />
+        <activity android:name=".about"></activity>
     </application>
 
 </manifest>

@@ -31,8 +31,10 @@ public class MenuPrincipal extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Creado por Alumnos De la Universidad Tecnologica de El salvador Derechos Reservados", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*Snackbar.make(view, "Creado por Alumnos De la Universidad Tecnologica de El Salvador, Derechos Reservados", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                Intent info = new Intent(getApplicationContext(),about.class);
+                startActivity(info);
             }
         });
 
